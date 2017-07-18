@@ -72,10 +72,10 @@ class Robot
         $currentDirection = array_search($this->forward, $this->cardinalPoints);
         if ($direction == 'left') {
             $currentDirection--;
-            if ($currentDirection < 0) $currentDirection = MAXCARDINALPOINT;
+            if ($currentDirection < 0) $currentDirection = self::MAXCARDINALPOINT;
         } else {
             $currentDirection++;
-            if ($currentDirection > MAXCARDINALPOINT) $currentDirection = 0;            
+            if ($currentDirection > self::MAXCARDINALPOINT) $currentDirection = 0;            
         }
         
         $this->forward = $this->cardinalPoints[$currentDirection];        
